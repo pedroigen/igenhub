@@ -1,0 +1,159 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# iGenhub.com API
+
+The iGenhub API lists all templates that have been created with the Hololens app.
+
+## Templates Collection [/templates]
+
+### List All Templates [GET]
+
+Description needed.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "_templateID": "1234",
+                "published_at": "1477423300",
+                "name": "Test App",
+                "status": "Published",
+                "components": [
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRN",
+                        "order": "0",
+                        "component": "<wide-button id=-KUdMOJM-2a06hNkYGRN></wide-button>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRA",
+                        "order": "1",
+                        "component": "<dual-buttons id=-KUdMOJM-2a06hNkYGRA></dual-buttons>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRC",
+                        "order": "0",
+                        "component": "<youtube id=-KUdMOJM-2a06hNkYGRC></youtube>"
+                    }
+                ]
+            },
+            {
+                "_templateID": "1235",
+                "published_at": "1477423302",
+                "name": "Test App",
+                "status": "Published",
+                "components": [
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRN",
+                        "order": "0",
+                        "component": "<wide-button id=-KUdMOJM-2a06hNkYGRN></wide-button>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRA",
+                        "order": "1",
+                        "component": "<dual-buttons id=-KUdMOJM-2a06hNkYGRA></dual-buttons>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRC",
+                        "order": "0",
+                        "component": "<youtube id=-KUdMOJM-2a06hNkYGRC></youtube>"
+                    }
+                ]
+            },
+            {
+                "_templateID": "1236",
+                "published_at": "1477423304",
+                "name": "Test App",
+                "status": "Published",
+                "components": [
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRN",
+                        "order": "0",
+                        "component": "<wide-button id=-KUdMOJM-2a06hNkYGRN></wide-button>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRA",
+                        "order": "1",
+                        "component": "<dual-buttons id=-KUdMOJM-2a06hNkYGRA></dual-buttons>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRC",
+                        "order": "0",
+                        "component": "<youtube id=-KUdMOJM-2a06hNkYGRC></youtube>"
+                    }
+                ]
+            }
+        ]
+
+### Create a Template [POST]
+
+A template can be created with this action. It takes a JSON
+object...
+
++ Request (application/json)
+
+            {
+                "_templateID": "1237",
+                "published_at": "1477423304",
+                "name": "Test App",
+                "status": "Published",
+                "components": [
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRN",
+                        "order": "0",
+                        "component": "<wide-button id=-KUdMOJM-2a06hNkYGRN></wide-button>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRA",
+                        "order": "1",
+                        "component": "<dual-buttons id=-KUdMOJM-2a06hNkYGRA></dual-buttons>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRC",
+                        "order": "0",
+                        "component": "<youtube id=-KUdMOJM-2a06hNkYGRC></youtube>"
+                    }
+                ]
+            }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /templates/1237
+
+    + Body
+
+            {
+                "_templateID": "1236",
+                "published_at": "1477423304",
+                "name": "Test App",
+                "status": "Published",
+                "components": [
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRN",
+                        "order": "0",
+                        "component": "<wide-button id=-KUdMOJM-2a06hNkYGRN></wide-button>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRA",
+                        "order": "1",
+                        "component": "<dual-buttons id=-KUdMOJM-2a06hNkYGRA></dual-buttons>"
+                    },
+                    {
+                        "_componentID": "-KUdMOJM-2a06hNkYGRC",
+                        "order": "0",
+                        "component": "<youtube id=-KUdMOJM-2a06hNkYGRC></youtube>"
+                    }
+                ]
+            }
+            
+### Delete a Template [DELETE]
+
+Description needed.
+
++ Response 200
+
+        { 
+            "result": True
+        }
