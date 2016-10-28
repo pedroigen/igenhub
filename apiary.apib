@@ -85,10 +85,19 @@ Description needed.
             }
         ]
 
+## Template View [/templates/{template_id}]
+
+### List Specific Template [GET]
+
++ Response 200 (application/json)
+
 ### Create a Template [POST]
 
 A template can be created with this action. It takes a JSON
 object...
+
++ Parameters
+    + template_id (number) - ID of the Template in the form of an integer
 
 + Request (application/json)
 
@@ -120,7 +129,7 @@ object...
 
     + Headers
 
-            Location: /templates/1237
+            Location: /templates/{templateID}
 
     + Body
 
@@ -157,3 +166,49 @@ Description needed.
         { 
             "result": True
         }
+        
+## Start Method [/start]
+
+### Start Project [GET]
+
+Description needed.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "projectID": "1234"
+            }
+        ]
+        
+## Verify Method [/verify]
+
+### Verify Project [POST]
+
+Description needed.
+
++ Request (application/json)
+
+        [
+            {
+                "projectID": "1234"
+            }
+        ]
+
++ Response 200 (application/json)
+
+## Export Method [/export]
+
+### Verify Project [POST]
+
+Description needed.
+
++ Request (application/json)
+
+        [
+            {
+                "projectID": "1234"
+            }
+        ]
+
++ Response 200 (application/json)
